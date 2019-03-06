@@ -1,0 +1,42 @@
+<!-- El siguiente código corresponde a una calculadora incompleta.
+El botón '=' funciona evaluando la expresión dentro del input de texto.
+Se requiere:
+Al presionar un dígito u operador este debe ser agregado al input.
+Agregar los dígitos faltantes.
+Agregar operadores faltantes (multiplicación y división).
+Agregar un botón para limpiar el input. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="calculator" value="" onclick=”calculator.display.value = eval(calculator.display.value)”>
+    <br>
+    <button onclick="add(1)" class="btn" type="button" name="button">1</button>
+    <button onclick="add(2)" class="btn" type="button" name="button">2</button>
+    <button onclick="add(3)" class="btn" type="button" name="button">3</button>
+    <button onclick="add(4)" class="btn" type="button" name="button">4</button>
+    <button onclick="add(5)" class="btn" type="button" name="button">5</button>
+    <button onclick="add(6)" class="btn" type="button" name="button">6</button>
+    <button onclick="add(7)" class="btn" type="button" name="button">7</button>
+    <button onclick="add(8)" class="btn" type="button" name="button">8</button>
+    <button onclick="add(9)" class="btn" type="button" name="button">9 </button>
+    <br>
+    <button class="btn" type="button" name="button">+</button>
+    <button class="btn" type="button" name="button">-</button>
+    <br>
+    <button class="result" type="button" name="result" onclick="calcTotal()">=</button>
+    <script type="text/javascript">
+      function add(valor){
+        let inputValue = valor;
+      }
+      var result = document.getElementsByName("result")[0];
+      var calculator = document.getElementsByName("calculator")[0];
+      var calcTotal = function(){
+        calculator.value = eval(calculator.value);
+      }
+    </script>
+  </body>
+</html>
